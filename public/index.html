@@ -1,0 +1,79 @@
+<!--Created by Daniel on 15.05.2017.-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modul 133 Einstieg</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/index.js" async></script>
+    <meta name="authors" content="Daniel Peters">
+</head>
+<body>
+
+<form id="schoolData" method="post">
+    <label for="userName">Name</label>
+    <input id="userName" name="userName" type="text" placeholder="Name" required>
+    <br>
+    <label for="number">Nummer</label>
+    <input id="number" name="number" type="number" placeholder="Nummer" required>
+    <br>
+    <label for="password">Passwort</label>
+    <input id="password" name="password" type="password" placeholder="Passwort" required>
+    <br>
+    <label for="comment"></label>
+    <textarea id="comment" name="comment" rows="5" required></textarea>
+    <br>
+    <label for="type">Typus</label>
+    <fieldset id="type" required>
+
+        <label for="public">Öffentlich</label>
+        <input id="public" type="radio" name="type" value="oeffentlich">
+
+        <br>
+        <label for="intern">Schulintern</label>
+        <input id="intern" type="radio" name="type" value="schulintern">
+        <br>
+
+        <label for="schoolClass">Klasse</label>
+        <input id="schoolClass" type="radio" name="type" value="klasse">
+        <br>
+
+        <label for="private">Privat</label>
+        <input id="private" type="radio" name="type" value="privat" checked>
+        <br>
+
+    </fieldset>
+    <br>
+    <label for="classGroup">Sichtbar für...</label>
+    <fieldset id="classGroup" required>
+        <label for="apA">AP15a</label>
+        <input id="apA" type="checkbox" name="visibleTo[]" value="AP15a">
+        <br>
+        <label for="apB">AP15b</label>
+        <input id="apB" type="checkbox" name="visibleTo[]" value="AP15b">
+        <br>
+        <label for="apC">AP15c</label>
+        <input id="apC" type="checkbox" name="visibleTo[]" value="AP15c">
+        <br>
+        <label for="stA">ST15a</label>
+        <input id="stA" type="checkbox" name="visibleTo[]" value="ST15b">
+        <br>
+        <label for="stB">ST15b</label>
+        <input id="stB" type="checkbox" name="visibleTo[]" value="ST15b">
+    </fieldset>
+    <br>
+    <select name="createdBy" required>
+        <option value="" disabled selected>Erfasst von...</option>
+        <option>AP15a</option>
+        <option>AP15b</option>
+        <option>AP15c</option>
+        <option>ST15a</option>
+        <option>ST15b</option>
+    </select>
+    <br>
+    <input type="submit" value="Ausgabe">
+</form>
+
+</body>
+</html>
